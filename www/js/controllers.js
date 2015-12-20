@@ -11,4 +11,14 @@ app.controller("YelpController", function ($scope, YelpService) {
             });
         };
     }
+
+    $scope.loadMore = function() {
+        // And check if has more data
+        if ( !$scope.yelp.isLoading && $scope.yelp.hasMore ) {
+            $scope.yelp.next().then(function() {
+                // Stop the gif animation. It's a directive in module Ionic
+                $scope.$broadcast('scroll.infiniteScrollComplete');
+            });
+        };
+    }
 });

@@ -53,6 +53,7 @@ app.service("YelpService", function ($q, $http) {
 		}
 	};
 
+	// Let's call it as default
 	self.load();
 
 	return self;
