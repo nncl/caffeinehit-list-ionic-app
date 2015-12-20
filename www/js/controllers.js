@@ -21,4 +21,12 @@ app.controller("YelpController", function ($scope, YelpService) {
             });
         };
     }
+
+    $scope.getDirections = function(cafe) {
+        console.log('Getting directions');
+    }
+
+    $scope.openMap = function(cafe) {
+        console.log('Openning map');
+    }
 });
