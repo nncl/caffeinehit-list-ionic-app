@@ -24,9 +24,16 @@ app.controller("YelpController", function ($scope, YelpService) {
 
     $scope.getDirections = function(cafe) {
         console.log('Getting directions');
-    }
+        var destination = [
+            cafe.location.coordinate.latitude,
+            cafe.location.coordinate.longitude
+        ];
 
-    $scope.openMap = function(cafe) {
-        console.log('Openning map');
+        var source = [
+            $scope.yelp.lat,
+            $scope.yelp.lon
+        ];
+
+        launchnavigator.navigate(destination, source);
     }
 });
