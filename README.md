@@ -1,5 +1,11 @@
 # Caffeinehit List - Ionic App
 
+## Installing
+
+- Run `bower install ngCordova` to install the ngCordova
+- Run `cordova plugin add cordova-plugin-geolocation` to install the geolocation plugin
+- Run `cordova plugin add uk.co.workingedge.phonegap.plugin.launchnavigator` to install the navigator plugin
+
 ## Corrections
 
 ### No results found or yelp API error
